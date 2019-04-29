@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo 1 - Life style coach</h1>
+
+    <script>
+        //Input: give me year of birth
+            // var myAge;
+            // myAge = prompt('Give me your age','10');
+            //     // popup with the answer box
+        var birthYear;
+        birthYear = prompt('Please tell me your year of birth', '1999');
+        
+
+        //Processing: find out your age and what you should being doing
+        var yourAge = 2019 - birthYear;
+        var activity;
+
+        //if you a child
+        if( yourAge < 18 ){
+            activity = 'have an icecream';
+        }
+
+        //if you are working
+        if( 18 <= yourAge < 65 ){
+            activity = 'Slave awayyy!';
+        }
+
+        //if you are retired
+        if( yourAge >= 65 ){
+            activity = 'Take a cruise trip';
+        }
+
+        //Output: output your activity
+        document.write('<h2>Your age is ' + yourAge + '</h2>');
+        document.write('<h2>' + activity + '</h2>');
+
+    </script>
+</body>
+</html>
