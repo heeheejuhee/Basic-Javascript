@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Input: number of bagels
+        var bagels = prompt('How many bagels are there?');
+        //Processing: find out the cost
+        var cost;
+
+        if (bagels < 6 ){
+            cost = bagels * 0.75;
+        } else if (bagels >= 6){
+            cost = bagels * 0.6;
+        }
+        //Output: the cost
+        document.write('The cost of your bagels will be $' + cost + ',thank you');
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //input: number of copies 
+        var copy = prompt('How many copies do you need?','110');
+
+        //processing: find out the cost
+        var cost;
+        if(copy <= 100) {
+            cost = copy * 0.05;
+        }
+        if (copy > 100){
+            cost = 5 + (copy - 100) * 0.03;
+        }
+        //output
+        document.write('The cost of your copies will be $' + cost + ', thank you');
+    </script>
+</body>
+</html>
