@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //input //sNum is stringnumber, inumber is integernumber
+        var sNum1 = prompt('Give me number 1','1');
+        var sNum2 = prompt('Give me number 2','2');
+        var iNum1 = parseInt(sNum1); //it becomes real 'number'
+        var iNum2 = parseInt(sNum2);
+
+    //processing
+        var sMessage = '';
+        if(iNum1 < iNum2){
+            sMessage = 'Number 2 is bigger';
+        }
+        if(iNum1 > iNum2){
+            sMessage = 'Number 1 is bigger';
+        }
+        if(iNum1 == iNum2){
+            sMessage = 'None is bigger';
+        }
+    //output
+        document.write('<h1>' + sMessage + '</h1>')
+    </script>
+</body>
+</html>
