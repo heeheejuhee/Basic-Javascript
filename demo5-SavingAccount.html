@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //input: balance, withdrawal
+        var sBalance = prompt('Please enter your balance');
+        var sWithdrawal = prompt('Please enter the amount you would to withdrawal');
+        var fBalance = parseFloat(sBalance);
+        var fwithdrawal = parseFloat(sWithdrawal);
+
+    //processing: sMessage
+        var sMessage = '';
+
+        if(fBalance < fwithdrawal){
+            sMessage = 'Sorry, you don not have enough money! ';
+        } else {
+            fBalance = fBalance - fwithdrawal;
+            // fBalance -= fWithdrawal;
+        }
+        if(fBalance < 150){
+            sMessage += 'and your balance is low';
+        }
+
+    //output:
+        document.write('<h1>Your balance is ' + fBalance.toFixed(2) + '</h1>');
+        document.write('<h1>' + sMessage + '</h1>');
+    </script>
+</body>
+</html>
