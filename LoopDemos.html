@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop Practice</title>
+</head>
+<body>
+    <script>
+    // Practice 1 : Display 0 to 9   
+        for(i = 0; i <= 9; i ++){
+            document.write(i + " ");
+        }
+    // Practice 2 : Display a row of 20 stars
+        for(i = 0; i <= 20; i ++){
+            
+        }
+    // Practice 3 : Request a number and display a row of that many stars(*)
+        var sNumber = prompt('how many stars?');
+        var iNumber = parseInt(sNumber);
+
+        var sOutput ='';
+        for(var i = 0; i<iNumber; i++){
+            sOutput += '*';
+        }
+        document.write('<h1>'+sOutput+'</h1>')
+
+
+    // Practice 4 : Find out the sum from 1 to 20
+        var sum = 0;
+        for(var i = 1; i <= 20; i ++){
+            sum = sum + i;  
+        }
+        document.write("Sum = " + sum);
+
+    // Practice 5 : Find out the sum of 1+ 1/2 + 1/3 + .. + 1/100
+        var fTotal = 1;
+        for (var i = 1; i <= 100; i++){
+            fTotal += 1/i;
+        }
+        document.write(fTotal);
+
+    // Practice 6 : Find out sum of odd numbers from 1 to 20
+        var iSum = 0;
+        for(var i = 1; i <= 20; i = i+2){
+            iSum += i;
+        }
+        document.write(iSum);
+
+    // Extra1 : Salary estimator
+        var sName = prompt('Your name');
+        var sAge = prompt('Your age');        
+        var sSalary = prompt('Your salary');        
+
+        var iAge = parseInt(sAge);        
+        var fSalary = parseInt(sSalary);
+        var fEarn = 0;
+
+        for(var i = iAge ; i < 65 ; i++){
+            fEarn += fSalary;
+            fSalary = fSalary * 1.05; //Salary increases by 5% every year
+        }
+        document.write('<h1>' + sName + ' will earn about $' + fEarn + '</h1>');
+
+
+
+    // Extra2 : Best way to get paid
+    // Option2 : $1 the first day, $2 the second day, $4 the third day ...
+    //           and so on with the amount doubling each day
+    //           Write a program to ask the number of workdays
+
+        // day 1 2 3 4 5 
+        // pay 1 2 4 8 16
+
+        var iNumDays = prompt('plz enter your workingdays');
+        var iOption2 =  0;
+
+        var iDailyWage = 1;
+        for(var i = 1; i <= iNumDays; i ++){
+            iOption2 += iDailyWage;
+            iDailyWage = iDailyWage * 2; //Double up daily wage
+        }
+        document.write(iOption2);
+
+
+
+    </script>
+</body>
+</html>
