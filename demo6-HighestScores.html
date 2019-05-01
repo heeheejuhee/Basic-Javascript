@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //input: score1,2,3
+        var sScore1 = prompt('Enter score 1');
+        var sScore2 = prompt('Enter score 2');
+        var sScore3 = prompt('Enter score 3');
+        var iScore1 = parseInt(sScore1);
+        var iScore2 = parseInt(sScore2);
+        var iScore3 = parseInt(sScore3);
+
+
+
+    //processing: average of 2 highest scores
+        var fAverageScore = 0;
+        
+        if((iScore1 <= iScore2) && (iScore1 <= iScore3)){
+            fAverageScore = (iScore2 + iScore3)/2;
+        }
+        if((iScore2 <= iScore1) && (iScore2 <= iScore3)){
+            fAverageScore = (iScore1 + iScore3)/2;
+        }
+        if((iScore3 <= iScore1) && (iScore3 <= iScore2)){
+            fAverageScore = (iScore1 + iScore2)/2;
+        }
+    
+    //output: average
+        document.write(fAverageScore.toFixed(2));
+    </script>
+</body>
+</html>
