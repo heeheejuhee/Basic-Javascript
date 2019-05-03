@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array Practice</h2>
+    <script>
+        //Array Practice 1: Juhee
+        var aCities = [];
+        aCities.push('Auckland');
+        aCities.push('Wellington');
+        aCities.push('Christchurch');
+        aCities.push('Dunedin');
+
+        //task 1
+        document.write('<h1 style=color:pink;>' + aCities[1] + '</h1>');
+        //task 2
+        for(var i = 0; i < aCities.length; i ++){
+            document.write('<h1> ' + aCities[i] + '</h1>');
+        }
+
+        //Array Practice 2: Luke
+        var aDays =[];
+        aDays.push('monday');
+        aDays.push('tuesday');
+        aDays.push('wednesday');
+        aDays.push('thursday');
+        aDays.push('friday');
+        aDays.push('saturday');
+        aDays.push('sunday');
+
+        var sNum = prompt('which number between 0-6 huh?');
+        var iNum = parseInt(sNum);
+
+        document.write('your lucky day this week will be <h2>'+aDays[iNum]+'</h2>');
+
+        //Array Practice 3: Luke
+        var aColors =[];
+        aColors.push('red');
+        aColors.push('blue');
+        aColors.push('red');
+        aColors.push('blue');
+        aColors.push('green');
+        aColors.push('red');
+        aColors.push('red');
+        aColors.push('green');
+        aColors.push('blue');
+        aColors.push('red');
+
+        var iRedCount = 0;
+        var iBlueCount = 0;
+        var iGreenCount = 0;
+
+        for(var i= 0 ; i<aColors.length ; i++){
+            
+            if(aColors[i] == "red"){
+                iRedCount = iRedCount +1;
+            }
+            if(aColors[i] == "blue"){
+                iBlueCount = iBlueCount +1;
+            }
+            if(aColors[i] == "green"){
+                iGreenCount = iGreenCount +1;
+            }
+        }
+
+        document.write('the number of reds will be ' +iRedCount + '<br>')
+        document.write('the number of blues will be ' +iBlueCount + '<br>')
+        document.write('the number of greens will be ' +iGreenCount + '<br>')
+
+        //Array Practice 4:
+
+        //Input
+        var sSize = prompt('Class size');
+        var iSize = parseInt(sSize);
+
+        var aChoices =[];
+        for(var i = 0; i<iSize; i++){
+            var sChoice = prompt('Coke or Pepsi ' + i, 'Coke');
+            aChoices.push(sChoice);
+        }
+        //Processing: counting  cokes and pepsi
+        var iCokeCount = 0;
+        var iPepsiCount = 0;
+        for(var i= 0 ; i<aChoices.length ; i++){
+            
+             if(aChoices[i] == "Coke"){
+                iCokeCount = iCokeCount +1;
+            }
+            if(aChoices[i] == "Pepsi"){
+                iPepsiCount = iPepsiCount +1;
+            }
+   
+        }
+        document.write('Coke Count ' + iCokeCount + '<br>');
+        document.write('Pepsi Count ' + iPepsiCount + '<br>');
+        
+        //Array Practice 5:
+        var sSize = prompt('Class size, please');
+        var iSize = parseInt(sSize);
+
+        var aGrades = [];
+        for(var i = 0 ; i<iSize; i++){
+            var sGrade = prompt('Grade : ' + i);
+            var iGrade = parseInt(sGrade);
+            aGrades.push(iGrade);
+        }
+
+        //processing
+        var iTotal = 0;
+        var iHighest = 0;
+        var iLowest = 100;
+        for(var i=0; i<aGrades.length;i++){
+            iTotal += aGrades[i];
+
+            if(aGrades[i] > iHighest){
+                iHighest = aGrades[i];
+            }
+
+            if(aGrades[i] < iLowest){
+                iLowest = aGrades[i];
+            }
+        }
+        var fAve = iTotal/iSize;
+
+        //ouput
+        document.write('<h1>Average is ' + fAve.toFixed(2)+ '</h1>');
+        document.write('<h1>Highest is ' + iHighest+ '</h1>');
+        document.write('<h1>Lowest is ' + iLowest+ '</h1>');
+
+
+    </script>
+    
+</body>
+</html>
