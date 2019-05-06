@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function calculateBMI(fWeight,fHeight){
+        fBMI = fWeight/(fHeight*fHeight);
+        return fBMI;
+    }
+    
+    var fWeight = parseFloat(prompt('How much do you weigh in Kilogram?'));
+    var fHeight = parseFloat(prompt('How tall are you in meters?'));
+    var fYourBMI = calculateBMI(fWeight,fHeight).toFixed(2);
+
+    document.write('<h2>Your BMI is : ' + fYourBMI + '</h2>');
+    
+    if(fYourBMI > 25.0){
+        document.write('<h3>You are overweight 😡</h3>');
+    }
+    if((fYourBMI > 18.5) && (fYourBMI < 25.0)){
+        document.write('<h3>You are healthy 😊</h3>');
+    }
+    if(fYourBMI < 16.0){
+        document.write('<h3>You are underweight 😣</h3>');
+    }
+    
+    </script>
+</body>
+</html>
