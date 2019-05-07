@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Define a function ------
+    function findMax(aNums){
+        var fMax = 0;
+        //find the fMax in the list
+        for (var i = 0; i < aNums.length; i++) {
+            if(fMax < aNums[i]){
+                fMax = aNums[i]
+            }
+        }
+        return fMax;
+    }
+    //Main program---------
+    //input
+    var iClassSize = parseInt(prompt('what is the class size?'));
+    var aMathsGrades = [];
+    var aEnglishGrades = [];
+    for (var i = 0; i < iClassSize; i++) {
+        var iMaths = parseInt(prompt('What is the students maths grade? ' + i))
+        aMathsGrades.push(iMaths);
+
+        var iEnglish = parseInt(prompt('What is the students English grade? ' + i))
+        aEnglishGrades.push(iEnglish);    
+    }
+
+    //processing
+    var aAverageGrades = [];
+    for (var i = 0; i < iClassSize; i++) {
+        var fAverage = (aMathsGrades[i]+aEnglishGrades[i])/2;
+        aAverageGrades.push(fAverage);
+    }
+    var fMaxGrade = findMax(aAverageGrades); 
+
+    //output
+    document.write('Max grade in class is ' + fMaxGrade.toFixed(2));
+        
+    </script>
+</body>
+</html>
