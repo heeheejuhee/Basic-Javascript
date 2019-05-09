@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="container">
+
+		<div>box 0</div>
+		<div>box 1</div>
+		<div>box 2</div>
+		<div>box 3</div>
+		<div>box 4</div>
+		<div>box 5</div>
+		<div>box 6</div>
+		<div>box 7</div>
+
+	</div>
+
+	<script type="text/javascript">
+	//Thanks Logan
+	//makeStars function
+	function makeStars(iNum){
+		var sStars = "";
+		for(var iCount=0; iCount<iNum; iCount++){
+			sStars += "*";
+		}
+		return sStars;//string of stars
+	}
+	//---------------------------------------------
+	// input
+	var aNums = [];
+	for (var i = 0; i < 8; i++) {
+		var iNum = parseInt(prompt('no. of stars: ' + i));
+		aNums.push(iNum);
+	}
+	//process: draw the corresponding number of stars to the inner divs
+	var oContainer = document.querySelector('#container');
+	var aInnerDivs = oContainer.children;
+
+	for(var i = 0; i<aInnerDivs.length; i++){
+		var sStars = makeStars(aNums[i]);
+		aInnerDivs[i].innerHTML = sStars;
+	}	
+
+
+	</script>
+	
+</body>
+</html>

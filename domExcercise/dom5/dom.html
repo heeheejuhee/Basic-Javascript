@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="container">
+
+		<div>box 0</div>
+		<div>box 1</div>
+		<div>box 2</div>
+		<div>box 3</div>
+		<div>box 4</div>
+		<div>box 5</div>
+		<div>box 6</div>
+		<div>box 7</div>
+
+	</div>
+
+	<script type="text/javascript">
+	//Thanks Kathryn
+	function makeStars(iNum){
+		var sStars = "";
+		for(var iCount=0; iCount<iNum; iCount++){
+			sStars += "*";
+		}
+		return sStars;//string of stars
+	}
+
+	function makeTree(iHeight){
+		var sTree = "";
+
+		for(var iCount=1; iCount<=iHeight;iCount++){
+			sTree += makeStars(iCount) + "<br />";
+		}
+		sTree += makeStars(1);
+		return sTree;
+	}
+	//---------------------------------------------
+
+	//input
+	var aColors = [];
+	var aTreeSize = [];
+	for( var i=0 ; i<8 ; i++ ){
+		var iTreeHeight = parseInt(prompt('How tall would you like your tree?', '5'));
+		aTreeSize.push(iTreeHeight);
+
+		var sColor = prompt('Would you like a red, green or blue tree?', 'red');
+		aColors.push(sColor);
+
+	}
+
+	//processing
+	var oContainer = document.querySelector('#container');
+	var aInnerDivs = oContainer.children;
+
+	for( var i=0 ; i<aInnerDivs.length ; i++ ){
+
+		aInnerDivs[i].innerHTML = makeTree(aTreeSize[i]);
+		aInnerDivs[i].style.color = aColors[i];
+	}
+
+	</script>
+	
+</body>
+</html>

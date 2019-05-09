@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="container">
+
+		<div>box 0</div>
+		<div>box 1</div>
+		<div>box 2</div>
+		<div>box 3</div>
+		<div>box 4</div>
+		<div>box 5</div>
+		<div>box 6</div>
+		<div>box 7</div>
+
+	</div>
+
+	<script type="text/javascript">
+	////Thanks Mr. Ripley
+
+	var aColors =[];	
+	for (var i = 0; i < 8; i++) {
+		var sColorInput = prompt('Give me a color please');
+		aColors.push(sColorInput);
+	}
+
+	var oContainer = document.querySelector('#container');
+	var aDivs = oContainer.children;
+	for (var i = 0; i < aDivs.length; i++) {
+		aDivs[i].style.backgroundColor = aColors[i];
+	}
+
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
