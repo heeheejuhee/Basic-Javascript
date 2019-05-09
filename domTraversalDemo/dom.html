@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div>
+
+		<div>
+			<p>Lorem ipsum dolor</p> 
+		</div>
+
+		<div id="middle-child">
+			<p>Lorem ipsum.</p>
+			<p>Necessitatibus, repellat.</p>
+		</div>
+
+		<div>
+			<p>Sit amet consectetur</p>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		var oMiddle = document.querySelector('#middle-child');
+		oMiddle.previousElementSibling.children[0].style.color = 'red';
+
+		var oParent = oMiddle.parentNode;
+		oParent.style.border = 'thick salmon solid';
+
+		oParent.children[2].children[0].style.fontSize = '2em';
+	
+	</script>
+	
+</body>
+</html>
