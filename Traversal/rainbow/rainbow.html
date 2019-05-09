@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div>
+
+		<div>
+     
+            <div id="middle">
+            
+                <div>
+                
+                    <div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+
+
+	</div>
+
+	<script type="text/javascript">
+	var aColorList = [];
+	for(var i = 0; i < 5; i ++){
+		var sColor = prompt('What color would you like to choose?');
+		aColorList.push(sColor);
+	}
+
+	var oMiddle = document.querySelector('#middle');
+	var oOuter = oMiddle.parentNode.parentNode;
+
+	oOuter.style.backgroundColor = aColorList[0];
+
+	oOuter.children[0].style.backgroundColor = aColorList[1];
+	oOuter.children[0].style.backgroundColor = aColorList[1];
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	
+	</script>
+	
+</body>
+</html>

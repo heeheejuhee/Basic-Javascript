@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="container" class="whiteBackground">
+
+        
+		<div id="greetingText">
+        	Greeting text</div>
+        
+        <div id="photo" class="redBackground">
+      
+        	*<br />
+            **<br />
+            ***<br />
+            ****<br />
+            *****<br />
+            *<br />
+        </div>
+
+
+	</div>
+
+	<script type="text/javascript">
+
+	function makeStars(iNum){
+		var sStars = "";
+		for(var iCount=0; iCount<iNum; iCount++){
+			sStars += "*";
+		}
+		return sStars;//string of stars
+	}
+
+	function makeTree(iHeight){
+		var sTree = "";
+
+		for(var iCount=1; iCount<=iHeight;iCount++){
+			sTree += makeStars(iCount) + "<br />";
+		}
+		sTree += makeStars(1);
+		return sTree;
+	}
+	//---------------------------------------------
+	
+		
+	
+	</script>
+	
+</body>
+</html>

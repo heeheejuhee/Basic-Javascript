@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body{
+	background-color:#CCC;
+	margin:0px;
+}
+
+#container {
+	background-color:#FFF;
+	width:900px;
+	height:460px;
+	margin:40px auto;
+	float:none;
+}
+
+div {
+	width:198px;
+	height:198px;
+	margin:20px 0px 0px 20px;
+	float:left;
+	text-align:center;
+	border:1px solid red;
+}
+
+.yellowBackground{
+	background-color:#FF0;
+}
+
+.greenBackground{
+	background-color:#0F0;
+}
+
+.blueBackground{
+	background-color:#0FF;
+}
+
+
+
+

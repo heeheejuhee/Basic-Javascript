@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body{
+	background-color:#CCC;
+	margin:0px;
+}
+
+div {
+
+	width:500px;
+	height:600px;
+	margin:50px auto;
+	text-align:center;
+	border:thin solid teal;
+
+}
+
+div > div {
+	width:300px;
+	height:400px;
+
+
+
+}
+
+div > div > div{
+	width:100px;
+	height:100px;
+
+
+
+}
+
+
+.redBackground{
+	background-color:#F00;
+}
+
+.orangeBackground{
+	background-color:#F90;
+}
+
+.yellowBackground{
+	background-color:#FF0;
+}
+
+.greenBackground{
+	background-color:#0F0;
+}
