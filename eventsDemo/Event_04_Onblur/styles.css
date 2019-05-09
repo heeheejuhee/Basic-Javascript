@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+body{
+	background-color:#CCC;
+	margin:0px;
+}
+
+#container {
+	background-color:#FFF;
+	width:900px;
+	height:460px;
+	margin:40px auto;
+	float:none;
+}
+
+input {
+
+	margin:40px auto;
+
+}
+
+div {
+	width:200px;
+	height:200px;
+	margin:20px 0px 0px 20px;
+	background-color:#0C0;
+	float:left;
+	text-align:center;
+}
+
+.redBackground{
+	
+	background-color:red;
+}
+.yellowBackground{
+	
+	background-color:yellow;
+}
+.blueBackground{
+	
+	background-color:blue;
+}

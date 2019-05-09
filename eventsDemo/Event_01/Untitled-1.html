@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="container">
+
+	    <div id="box0">
+	    	box 0 - Click me
+	    </div>
+	    
+	    <div id="box1">
+	    	box 1 - Click me
+	    </div>
+	    
+	</div>
+
+	<script type="text/javascript">
+
+	function changeColorBox0(){
+		var oBox0 = document.querySelector('#box0');
+		oBox0.style.backgroundColor = 'red';
+	}
+
+	function changeColorBox1(){
+		var oBox1 = document.querySelector('#box1');
+		oBox1.style.backgroundColor = 'pink';
+	}
+
+	//Main program
+	var oBox0 = document.querySelector('#box0');
+	var oBox1 = document.querySelector('#box1');
+	
+	oBox0.addEventListener('click',changeColorBox0);
+	oBox1.addEventListener('click',changeColorBox1);
+
+
+	
+
+
+
+
+
+
+	</script>
+</body>
+</html>
