@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body{
+	background-color:#CCC;
+	margin:0px;
+}
+
+#container {
+	background-color:#FFF;
+	width:900px;
+	height:460px;
+	margin:40px auto;
+	float:none;
+}
+
+input {
+	
+	margin:40px auto;
+
+}
+
+div {
+	width:200px;
+	height:200px;
+    margin:20px 0px 0px 20px;
+    box-sizing: border-box;
+    border: thin #ccc solid;
+	float:left;
+    text-align:center;
+    font-size: 0;
+}
+
+.redBackground{
+	
+	background-color:red;
+}
+.yellowBackground{
+	
+	background-color:yellow;
+}
+.blueBackground{
+	
+	background-color:blue;
+}
