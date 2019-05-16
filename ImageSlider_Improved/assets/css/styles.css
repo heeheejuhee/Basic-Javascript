@@ -1,0 +1,149 @@
+/* Color scheme:
+	#FCE9CC
+	#FFCDAC
+	#FFA08B
+	#FF625E
+	#123638
+*/
+.image-slider{
+	width:100vw;
+	height: 40vw;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.image-slider i{
+	color:rgba(225,255,255,0.5);
+	position: absolute;
+	top:50%;
+	z-index: 100;
+	transform: translateY(-50%);
+	font-size: 4vw;
+}
+.image-slider i:hover{
+	color:#123638;
+}
+
+.image-slider .fa-chevron-circle-left{
+	left:0.5em;
+}
+
+.image-slider .fa-chevron-circle-right{
+	right:0.5em;
+}
+
+.slides{
+	position: relative;
+	height: 100%;
+}
+
+.slides>div{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding:0 10vw;
+	transition:all ease 1s;
+	opacity: 0;
+	display: flex;
+	flex-wrap:wrap;
+	align-content: center;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+.slides h1{
+	flex:0 0 100%;
+	font-size: 3em;
+	color:#123638;
+	margin:0;
+}
+.slides h2{
+	flex:0 0 100%;
+	color:#fff;
+	margin:1em 0;
+}
+
+.slides a{
+	background-color:#123638;
+	color:#fff;
+}
+
+.slides>div:nth-child(4n+1){
+	background-color:#FCE9CC;
+}
+.slides>div:nth-child(4n+2){
+	background-color:#FFCDAC;
+}
+.slides>div:nth-child(4n+3){
+	background-color:#FFA08B;
+}
+.slides>div:nth-child(4n+4){
+	background-color:#FF625E;
+}
+
+.slides>.current{
+	z-index: 50;
+	opacity: 1;
+	
+}
+
+/* Dots */
+
+.dots{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1em;
+}
+
+.dots>div{
+	border: 1px white solid;
+	padding: 0.5em;
+	flex: 0 0 1em;
+	height: 1em;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin: 0.7em;
+	transition: ease all 1s;
+}
+
+.dots>.current-dot {
+	background-color: #fff;
+}
+
+/* Animation thing */
+
+.transition-fast {
+	transition: all ease 1s;
+}
+.transition-slow {
+	transition: all ease 3s;
+}
+
+.slide-in {
+	transform: translateX(-50vw);
+}
+.current .slide-in {
+	transform: translateX(0);
+}
+
+.drop-in {
+	transform: translateY(-50vw);
+}
+.current .drop-in {
+	transform: translateY(0);
+}
+
+.flip-in {
+	transform: perspective(5em) rotateX(90deg);
+}
+.current .flip-in {
+	transform: rotateX(0);
+}
