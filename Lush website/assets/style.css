@@ -1,0 +1,134 @@
+.container {
+    margin: auto;
+    text-align: center;
+    padding-top:1px;
+}
+
+.section1 {
+    height: 100vh;
+    /* background-color: pink; */
+    background-image: url(https://media.giphy.com/media/2nkwaamsVGh68/giphy.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/**********  ul  *************/
+
+.pure-menu {
+    /*padding: 2em 0;*/
+    background-color: rgba(255,255,255,0.5);
+    /*opacity: 0.5;*/
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+
+.pure-menu-link {
+    color: black;
+    padding: 0.2em 1em;
+
+}
+
+
+
+
+.pure-menu-link:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #FF097D;
+    transition: 0.3s all ease-in-out;
+}
+.pure-menu-link:hover {
+    color: #FF097D;
+    background-color:rgba(0,0,0,0);
+    
+}
+.pure-menu-link:hover:before{
+    color: #FF097D;
+    width: 100%;
+}
+
+
+
+
+
+
+/**********  li  *************/
+
+.pure-menu-item {
+    margin: 0 1.2em;
+    z-index: 1;
+}
+.pure-menu-item img {
+    width: 7em;
+}
+
+
+.message {
+    padding: 23em 0;
+}
+.message h1 {
+    font-size: 4em;
+    margin: 0;
+}
+.message p {
+    color: white;
+    margin-bottom: 5em;
+    font-size: 1.2em;
+}
+.message a {
+    padding: 1.4em 2em;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 0px 30px -19px rgba(0,0,0,0.68);
+}
+
+
+
+
+/** section2 */
+.section2{
+    background-color: black;
+    height: 80vh;
+}
+
+
+/* section3 */
+.section3{
+    /* background-color: lightgray; */
+    height: 80vh;
+}
+
+
+/* section4 */
+.section4{
+    background-color: lightgray;
+    height: 80vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
