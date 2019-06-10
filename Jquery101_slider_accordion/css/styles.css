@@ -1,0 +1,38 @@
+body{
+	
+}
+header{
+	height: 100vh;
+	position: fixed;
+	width: 20em;
+	background-color: rgb(178, 125, 186);
+	top: 0;
+	left: -17em;
+}
+main{
+
+	min-height: 100vh; 
+
+}
+
+#slide-button{
+	font-size: 2em;
+	float: right;
+	width: 1em;
+	color: white;
+
+}
+
+main ul{
+
+	margin-left:5em;
+	list-style-type: none;
+	padding: 0  
+
+}
+main>ul>li>h2>i{
+
+	margin-right: 0.5em;
+	color: rgb(137, 78, 179); 
+
+}
