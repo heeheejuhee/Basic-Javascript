@@ -1,0 +1,29 @@
+*{
+	margin:0;
+}
+
+.section{
+	height: 1000px;
+}
+
+.section:nth-child(odd){
+	background-color:rgba(0,0,0,0.2);
+}
+
+form{
+	width: 80%;
+	max-width: 30em;
+	margin:auto;
+	padding-top:5em;
+}
+
+label,input{
+	transition:all ease 0.2s;
+}
+
+
+
+
+
+
+
