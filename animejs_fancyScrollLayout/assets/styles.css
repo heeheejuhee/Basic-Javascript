@@ -1,0 +1,64 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    border-bottom: thin transparent solid;
+    border-top: thin transparent solid;
+    overflow: hidden;
+}
+.container:nth-child(odd){
+    background-image:
+                    repeating-linear-gradient(90deg, 
+                                                rgba(255, 85, 152, 0.15), 
+                                                rgba(255, 85, 152, 0.15) 1em, 
+                                                rgba(0,0,0,0) 1em, 
+                                                rgba(0,0,0,0) 2em),
+                     linear-gradient(160deg,rgba(255, 85, 152,0.1),rgba(0,0,0,0.0) 50%);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container:nth-child(odd) h1{
+    font-size: 4em;
+}
+
+.section2 {
+    height: 600vh;
+}
+
+.section2 .viewport{
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.section2 .layer{
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+
+}
+.section2 .layer:nth-child(odd){
+    background-color: salmon;
+}
+.section2 .layer:nth-child(even){
+    background-color: cyan;
+}
+
+.section2 h1{
+    font-size: 30vw;
+}
+
+
+
