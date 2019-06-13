@@ -10,6 +10,7 @@
 }
 
 .section1 {
+    
     height: 100vh;
     /* background-color: pink; */
     background-image: url(https://media.giphy.com/media/xT8qB7FGjYcByUIDdu/giphy.gif);
@@ -29,7 +30,9 @@
     position: fixed;
     top:0;
     left: 0;
+    z-index: 100;
 }
+
 
 
 .pure-menu-link {
@@ -66,7 +69,7 @@
 /**********  li  *************/
 
 .pure-menu-item {
-    margin: 0 1.2em;
+    margin: 0 2em;
     z-index: 1;
 }
 .pure-menu-item img {
@@ -102,13 +105,38 @@
 .section2{
     background-color: #fff;
     /*height: 80vh;*/
+    position: relative;
+
 }
 
 
 .section2 .text-box {
-    border: 1px red solid;
+    border: 10px black solid;
+    background-color: white;
+    padding: 0 3em;
+    width: 20em;
+    height: 22em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition:all ease 2s;
+
+}
+.invisible{
+    opacity: 0;
 }
 
+.section2 .text-box p {
+    margin-bottom: 2.3em;
+}
+
+.section2 .text-box a {
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    padding: 1.3em;
+}
 
 
 .section2 .viewport{
@@ -118,6 +146,7 @@
     /*background-image:linear-gradient(#296F9C,#17081B);*/
     perspective: 50vw;
 }
+
 .section2 .layer{
     position: absolute;
     width: 100%;
@@ -132,36 +161,66 @@
 
 .layer0 {
     background-image: url(1.png);
+    animation: first 6s ease infinite alternate;
 }
 .layer1 {
     background-image: url(2.png);
+    animation: first 5s ease infinite alternate;
 }
 .layer2 {
     background-image: url(3.png);
+    animation: first 8s ease infinite alternate;
 }
 .layer3 {
     background-image: url(4.png);
+    animation: first 10s ease infinite alternate;
 }
 .layer4 {
-    background-image: url(6.png);
+    background-image: url(5.png);
+    animation: first 12s ease infinite alternate;
 }
-.layer5 {
+/*.layer5 {
     background-image: url(7.png);
-}
+}*/
 
 
 
-
-
-
-/* section3 */
+/************* section3 *************/
 .section3{
      background-color: white; 
     height: 80vh;
+    border: 10px black solid;
+
 }
 
+@keyframes first{
+
+    0%   { 
+        transform: translateY(-2vw,0);
+    }
+    50% { 
+        transform: translate(2vw,0);
+    }
+    100% { 
+        transform: translateX(-2vw,0);
+    }
+
+}
+@keyframes second{
+
+    0%   { 
+        transform: translateY(-2vw,0);
+    }
+    100% { 
+        transform: translateY(2vw,0);
+    }
+
+}
+
+
 .section3 h1 {
-    font-size: 4em;
+    font-size: 5em;
+    /*animation: hovering 2s ease infinite alternate;*/
 }
 
 .flex-container {
@@ -185,13 +244,40 @@
     width: 100%;
 }
 
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.popup a {
+    padding: 3em;
+    background-color: red;
+
+}
+.popup img {
+    display: block;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
 
 /* section4 */
 .section4{
     background-color: lightgray;
-    height: 80vh;
+    height: 90vh;
 }
-
 
 
 

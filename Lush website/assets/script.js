@@ -6,7 +6,7 @@ $(function(){
             return (l-i)*50;
         },
         easing: 'linear',
-        duration: 8000,
+        duration: 3000,
         autoplay: false,
     });
     var anime2 = anime({
@@ -16,7 +16,7 @@ $(function(){
 
         },
         easing: 'linear',
-        duration: 3000,
+        duration: 7000,
         autoplay: false,
     });
     var anime3 = anime({
@@ -26,11 +26,12 @@ $(function(){
 
         },
         easing: 'linear',
-        duration: 1000,
+        duration: 9000,
         autoplay: false,
     });
 
-
+    var s2Offset = $('.section2').offset().top;
+    var thirdScreen = $(window).height()/3;
     $(document).on('scroll',function(){
         var scrollTop = $(document).scrollTop();
 
@@ -41,9 +42,33 @@ $(function(){
         anime2.seek(anime2.duration*progress);
         anime3.seek(anime3.duration*progress);
 
+        if(scrollTop >= s2Offset - thirdScreen){
+            $('.text-box').removeClass('invisible');
+        }else{
+            $('.text-box').addClass('invisible');
+        }
+    });
+
+
+    
+
+    //------- Popup --------//
+
+    $('.flex-container div').on('click',function(){
+        var clone = $(this).find('img').clone();
+
+        $('.popup').empty();
+        $('.popup').append(clone);
+        $('.popup').fadeIn();
+
 
     });
     
+
+    $('.popup').on('click',function(){
+ 
+        $(this).fadeOut();
+    });
 });
  
 
